@@ -1,0 +1,754 @@
+body {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.75em;
+  font-weight: 400;
+  color: #666;
+}
+#aside {
+  padding: 60px 60px 15px 60px;
+  width: 25%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  overflow-x: hidden;
+  z-index: 1001;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  background: #e52e71;
+  background-image: linear-gradient(to bottom, #e52e71, #ff8a00);
+}
+#aside::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+#logo {
+  text-align: center;
+  padding: 0;
+  display: block;
+  width: 100%;
+}
+#logo a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+#logo a img {
+  width: 40px;
+  height: auto;
+  margin-bottom: 0px;
+}
+#logo h1 a {
+  color: #fff;
+}
+#logo h1 span {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  text-transform: none;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.75em;
+}
+#main-menu {
+  padding: 30px 0 45px 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  display: block;
+  position: relative;
+}
+#main-menu ul {
+  list-style: none;
+  display: block;
+  position: relative;
+}
+#main-menu ul li a {
+  margin: 7px 0 0 0;
+  padding: 0 0 7px 0;
+  list-style: none;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 18px;
+  line-height: 1.75em;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.04);
+  color: #fbf7f9;
+  text-decoration: none;
+}
+.betty-contact-info {
+  padding: 10px 0px;
+}
+.betty-contact-info .feat-inner {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+.betty-contact-info .icon {
+  width: 40px;
+  height: 40px;
+  line-height: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  float: left;
+  color: #fff;
+  opacity: 0.9;
+}
+.betty-contact-info .feat-info {
+  overflow: hidden;
+}
+.betty-contact-info h5 {
+  font-size: 15px;
+  margin-bottom: 0px;
+  margin-top: 3px;
+  font-family: "Playfair Display", sans-serif;
+  color: #fff;
+}
+
+.betty-contact-info h6 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  font-family: "Playfair Display", sans-serif;
+}
+.betty-footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  padding: 60px 0px 0px 0px;
+  text-align: center;
+}
+.betty-footer ul {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 0;
+  position: relative;
+}
+.betty-footer ul li {
+  display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.09);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+.betty-footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.betty-footer a i {
+  color: #fff;
+}
+#right-section::-webkit-scrollbar {
+  display: none;
+}
+
+/* Base Styles (unchanged from your original code) */
+
+/* Responsive Styles */
+#navbar {
+  display: none !important;
+}
+@media screen and (max-width: 768px) {
+  #aside {
+    display: none !important;
+  }
+  #navbar {
+    display: flex !important;
+    z-index: 1001;
+    background: #e52e71;
+    background-image: linear-gradient(to bottom, #e52e71, #ff8a00);
+  }
+}
+
+#right-section {
+  width: 75%;
+}
+@media screen and (max-width: 768px) {
+  #right-section {
+    width: 100%;
+    margin-top: 65px;
+  }
+}
+
+#slider1card {
+  position: relative;
+  top: 70vh;
+  left: 15px;
+  animation: side 2s;
+}
+@keyframes side {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+#exploremore {
+  border-radius: 20px;
+  background-color: #e52e71;
+  color: #fff;
+  transition: 0.3s;
+}
+#exploremore:hover {
+  background-color: #ff8a00;
+}
+
+#outer-div {
+  overflow: hidden; /* Ensure both x and y overflow are hidden */
+  position: relative; /* Relative position to properly contain children */
+}
+
+.inner-img {
+  transition: 0.5s;
+  filter: brightness(50%);
+}
+
+.inner-img:hover {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+
+#text {
+  position: absolute; /* Absolute position for easier animation */
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the text horizontally */
+  transition: bottom 0.5s ease-in-out; /* Smooth transition for bottom */
+}
+#text:hover .inner-img {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+#text a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#outer-div:hover #text {
+  bottom: 50px; /* Move text upwards on hover */
+}
+.betty-makeup-container {
+  position: relative;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 30px;
+  padding-bottom: 0;
+  background: #fff;
+  border-bottom: 3px solid transparent;
+  transition: 0.2s;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 3;
+  box-shadow: 0 25px 75px rgba(0, 0, 0, 0.05);
+}
+
+.betty-makeup-img-area {
+  font-size: 42px;
+  color: #e52e71;
+  margin-bottom: 25px;
+  margin-right: 0;
+  float: left;
+  width: 100%;
+  transition: all 200ms ease-in-out;
+}
+
+.betty-makeup-img-area span,
+a,
+.betty-makeup-img-area img {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  height: 50px;
+}
+
+.betty-makeup-text-area {
+  display: inline-block;
+  vertical-align: bottom;
+  transition: transform 0.2s ease-in-out;
+}
+.betty-makeup-heading {
+  font-size: 20px;
+}
+.betty-makeup-text-area p {
+  font-family: inherit !important;
+  opacity: 0;
+  color: #666;
+  margin-bottom: -35px;
+}
+.betty-makeup-container:hover {
+  box-shadow: 0 44px 98px 0 rgba(0, 0, 0, 0.12);
+  z-index: 100;
+  border-bottom: 3px solid #e52e71;
+}
+.betty-makeup-container:hover .betty-makeup-img-area {
+  opacity: 0;
+}
+.betty-makeup-container:hover .betty-makeup-text-area,
+.betty-makeup-container:hover .betty-makeup-img-area {
+  -webkit-transform: translate3d(0, -67px, 0);
+  transform: translate3d(0, -67px, 0);
+}
+
+.betty-makeup-container:hover .betty-makeup-text-area p {
+  opacity: 1;
+}
+
+.betty-contact-info2 {
+  padding: 10px 0px;
+}
+
+.betty-contact-info2 .feat-inner2:last-child {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.05);
+}
+.betty-contact-info2 .feat-inner2 {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.betty-contact-info2 .icon {
+  width: 40px;
+  height: 40px;
+  line-height: 35px;
+  font-size: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  float: left;
+  color: #e52e71;
+}
+.betty-contact-info2 h5 {
+  font-size: 16px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: "Playfair Display", sans-serif;
+  color: #000;
+}
+.betty-contact-info2 h6 {
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="file"],
+textarea {
+  max-width: 100%;
+  margin-bottom: 0px;
+  border: none;
+  padding: 7px 15px;
+  height: auto;
+  background-color: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.75em;
+  color: #666;
+  background-image: none;
+  border: 1px solid #ececec;
+}
+
+#submit {
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  background-color: #e52e71;
+  color: #fff;
+  transition: 0.3s;
+}
+#submit:hover {
+  background-color: #ff8a00;
+}
+
+#about h2,
+#team h2,
+#services h2,
+#makeup h2,
+#contact h2,
+#brands h2 {
+  margin-bottom: 0px;
+  font-size: 30px;
+  color: #e52e71;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0 0 15px 0;
+}
+#about h4,
+#team h4,
+#services h4,
+#makeup h4,
+#contact h4,
+#brands h4 {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+#about img {
+  height: 500px;
+  width: 500px;
+}
+
+#team .mycard {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 25px 75px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 25px 75px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+#team .img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+}
+
+#team .info {
+  margin-left: 170px;
+}
+
+.valign {
+  display: flex;
+  align-items: center;
+}
+.full-width {
+  width: 100% !important;
+}
+#team .info h6 {
+  margin-right: 15px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  display: inline-block;
+  color: #000;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0 0 15px 0;
+}
+#team .info span {
+  color: #e52e71;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#team .info p {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.75em;
+  font-weight: 400;
+  margin: 0 0 15px 0;
+  color: #666;
+}
+
+#team .info .social {
+  margin-top: 10px;
+}
+
+#team .info .social a {
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 38px;
+  border-radius: 50%;
+  border: 1px solid #e52e71;
+  color: #e52e71;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+#team,
+#makeup,
+#blog,
+#brands {
+  background-color: #fefafc;
+}
+
+.betty-testimonial {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  clear: both;
+  width: 100%;
+  display: block;
+  background-position: center;
+}
+
+.bg-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-fixed {
+  background-attachment: fixed;
+}
+.testimonials .section-head {
+  text-align: left;
+  margin-bottom: 0;
+}
+.testimonials .section-head h4 {
+  padding-bottom: 0;
+  color: #e52e71;
+  font-size: 30px;
+  line-height: 1.2em;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+.testimonials .section-head p {
+  color: #666;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.75em;
+  font-weight: 400;
+  margin: 0 0 15px 0;
+}
+.testimonials .item-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.testimonials .item-box .quote {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 100px;
+  margin: 0 auto 30px;
+  opacity: 0.1;
+}
+.third-carousel img {
+  display: block;
+  width: 100%;
+}
+.testimonials .item-box p {
+  font-size: 16px;
+  color: #666;
+  font-family: "Playfair Display", sans-serif;
+  line-height: 1.75em;
+  font-weight: 400;
+  margin: 0 0 15px 0;
+}
+.testimonials .item-box .info {
+  text-align: left;
+  margin: 30px 0 15px 0;
+}
+.testimonials .item-box .info .author-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  float: left;
+  overflow: hidden;
+}
+.testimonials .item-box .info .cont {
+  margin-left: 60px;
+}
+.testimonials .item-box .info h6 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  line-height: 1em;
+  font-family: "Playfair Display", serif;
+  margin: 0 0 15px 0;
+}
+.testimonials .item-box .info span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin-right: 5px;
+}
+span,
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.betty-home-blog {
+  background-color: #fefafc;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  clear: both;
+  width: 100%;
+  display: block;
+}
+.betty-heading {
+  margin-bottom: 0px;
+  font-size: 30px;
+  color: #e52e71;
+}
+.heading-meta {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.blog-entry {
+  width: 100%;
+  float: left;
+  background: #fff;
+  margin-bottom: 30px;
+  box-shadow: 0 25px 75px rgba(0, 0, 0, 0.05);
+}
+.blog-entry .blog-img {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 15px;
+}
+.blog-entry .blog-img img {
+  position: relative;
+  max-width: 100%;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.blog-entry .desc {
+  padding: 20px;
+}
+.blog-entry .desc span {
+  display: block;
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: #999 !important;
+}
+
+.blog-entry .desc h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 1.5em;
+}
+.blog-entry .desc h4 a {
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.blog-entry .desc p a {
+  display: block;
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: #999 !important;
+  text-decoration: none;
+}
+#btn-contact {
+  font-family: "Rambla", serif;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 0;
+  text-shadow: none;
+  padding: 12px 32px;
+  box-shadow: none;
+  border: none;
+  color: #fff;
+
+  transition: 0.15s ease-out;
+  margin-top: 15px;
+  border-radius: 50px;
+  background-color: #e52e71;
+}
+#btn-contact:hover {
+  background-color: #ff8a00;
+  color: #666;
+}
+a:hover,
+a:active,
+a:focus {
+  color: #000;
+  outline: none;
+  text-decoration: none !important;
+}
+
+#betty-footer2 {
+  padding: 60px;
+  background: #e52e71;
+}
+
+#betty-footer2 .betty-logo {
+  text-align: center;
+
+  display: block;
+  width: 100%;
+}
+
+#betty-footer2 h2 {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1em;
+  margin-bottom: 0;
+  color: #fff;
+}
+#betty-footer2 h2 span {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  text-transform: none;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.75em;
+}
+#betty-footer2 .betty-footer {
+  position: relative;
+  right: 0;
+  left: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
+#betty-footer2 p {
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  line-height: 1.5em;
+}
+#betty-footer2 .betty-logo img {
+  max-width: 40px;
+}

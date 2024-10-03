@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f0f0f0;
+      }
+      .login-container {
+        max-width: 500px;
+        margin: 100px auto;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+      }
+      .login-container h2 {
+        text-align: center;
+        color: #6c5ce7;
+        margin-bottom: 30px;
+      }
+      .login-container .form-group {
+        margin-bottom: 20px;
+      }
+      .login-container label {
+        color: #6c5ce7;
+        font-weight: bold;
+      }
+      .login-container .form-control {
+        border: 2px solid #d1d1d1;
+        border-radius: 5px;
+      }
+      .login-container .form-control:focus {
+        border-color: #6c5ce7;
+        box-shadow: none;
+      }
+      .login-container .btn-primary {
+        background-color: #ff7675;
+        border-color: #ff7675;
+      }
+      .login-container .btn-primary:hover {
+        background-color: #d63031;
+        border-color: #d63031;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-container">
+        <h2><i class="fas fa-user"></i> Admin Login</h2>
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="username" class="form-label">Email</label>
+            <input
+              type="email"
+              name="username"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              name="pass"
+              class="form-control"
+              id="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              name="cpass"
+              class="form-control"
+              id="confirmPassword"
+              placeholder="Confirm your password"
+            />
+          </div>
+          <button type="submit" name="login" class="btn btn-primary">
+            <i class="fas fa-sign-in-alt"></i> Login
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          try {
+            const response = await fetch("http://localhost:5000/admin/login", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+              // Login successful, redirect or perform any necessary action
+              // window.location.href = "/admin/dashboard";
+              alert("Login successfull")
+              window.location.href="/admin/dashboard"
+            } else {
+              // Display error message
+              alert(data.message);
+            }
+          } catch (error) {
+            console.error("Error:", error);
+          }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

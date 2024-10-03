@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <style>
+    * {
+      font-family: "Playfair Display", serif;
+    }
+
+    .body_section {
+      overflow-y: scroll;
+    }
+
+    .base_color {
+      color: #e52e71;
+    }
+
+    .our_services {
+      border-radius: 8px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .service_link {
+      padding: 8px 5px;
+      border-bottom: 1.5px solid #7a7a7a;
+      text-decoration: none;
+      transition: all ease-in-out 200ms;
+    }
+
+    .service_link:hover {
+      color: #e52e71 !important;
+      border-bottom: 1.5px solid #e52e71;
+    }
+
+    .name_and_price {
+      border-bottom: 2px dotted #e52e71;
+    }
+
+    .img-fluid {
+      border-radius: 8px;
+    }
+  </style>
+  <body>
+    <aside id="aside">
+      <div id="logo">
+        <a href="index.html">
+          <img src="./Images/Logo3.PNG" alt="" />
+        </a>
+        <h1>
+          <a href="index.html">Palka Arora</a>
+          <span>Makeup Artist</span>
+        </h1>
+      </div>
+
+      <nav id="main-menu">
+        <ul>
+          <li><a href="index.html#betty-hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="betty-contact-info">
+        <div class="feat-inner">
+          <span class="icon et-clock">
+            <i class="fa-regular fa-clock"></i>
+          </span>
+          <div class="feat-info">
+            <h5>Mon-Fri: 08.00 - 19.00</h5>
+            <h6>Sunday: Closed</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="betty-contact-info">
+        <div class="feat-inner">
+          <span class="icon et-phone">
+            <i class="fa-solid fa-phone"></i>
+          </span>
+          <div class="feat-info">
+            <h5>+1 203-123-0606</h5>
+            <h6>515 West Ave Norwalk</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="betty-footer">
+        <ul>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- B Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">
+          <h2>Palka Arora</h2>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <div class="betty-footer">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- B Navbar -->
+
+    <section
+      id="right-section"
+      class="vh-100 bg-danger right-section position-absolute top-0 end-0"
+    >
+      <div class="container-fluid bg-body-tertiary pt-5 px-5">
+        <div class="row">
+          <div class="col-8">
+            <img
+              src="https://duruthemes.com/demo/html/betty/onepage/images/services/1.jpeg"
+              alt="Failed to load image"
+              class="img-fluid"
+            />
+
+            <h2 class="mt-4 base_color">Body Treatments</h2>
+
+            <p class="mt-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              ipsam non animi! Itaque molestias ipsa, fuga dolorum facilis illo
+              commodi. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Illum corporis fugit maxime ratione esse fuga amet necessitatibus
+              vitae, cum unde inventore dicta reprehenderit totam eius, eveniet
+              modi asperiores, quibusdam neque.
+            </p>
+
+            <div class="display_services d-flex flex-column gap-4 mt-5">
+              <div class="each_service_detail d-flex flex-column gap-2">
+                <div
+                  class="name_and_price d-flex justify-content-between base_color"
+                >
+                  <h5 class="fw-bolder">Cut and Finish</h5>
+                  <h5 class="fw-bolder">Rs.500/-</h5>
+                </div>
+                <div class="description text-secondary">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Doloremque rem error officiis deleniti exercitationem aperiam
+                  dolorum repellat, libero id nesciunt!
+                </div>
+              </div>
+              <div class="each_service_detail d-flex flex-column gap-2">
+                <div
+                  class="name_and_price d-flex justify-content-between base_color"
+                >
+                  <h5 class="fw-bolder">Hair Coloring</h5>
+                  <h5 class="fw-bolder">Rs.500/-</h5>
+                </div>
+                <div class="description text-secondary">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Doloremque rem error officiis deleniti exercitationem aperiam
+                  dolorum repellat, libero id nesciunt!
+                </div>
+              </div>
+              <div class="each_service_detail d-flex flex-column gap-2">
+                <div
+                  class="name_and_price d-flex justify-content-between base_color"
+                >
+                  <h5 class="fw-bolder">Wash</h5>
+                  <h5 class="fw-bolder">Rs.500/-</h5>
+                </div>
+                <div class="description text-secondary">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Doloremque rem error officiis deleniti exercitationem aperiam
+                  dolorum repellat, libero id nesciunt!
+                </div>
+              </div>
+            </div>
+
+            <h3 class="mt-5 base_color">Photo Gallery</h3>
+
+            <div class="images_gallery container mt-3">
+              <div class="row">
+                <div class="col-4 image_container mb-3">
+                  <img
+                    src="https://duruthemes.com/demo/html/betty/onepage/images/services/1.jpeg"
+                    alt="Failed to load image"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="col-4 image_container mb-3">
+                  <img
+                    src="https://duruthemes.com/demo/html/betty/onepage/images/services/g3.jpeg"
+                    alt="Failed to load image"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="col-4 image_container mb-3">
+                  <img
+                    src="https://duruthemes.com/demo/html/betty/onepage/images/services/1.jpeg"
+                    alt="Failed to load image"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="col-4 image_container mb-3">
+                  <img
+                    src="https://duruthemes.com/demo/html/betty/onepage/images/services/g3.jpeg"
+                    alt="Failed to load image"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div
+              class="our_services w-full px-4 pt-4 pb-5 bg-white d-flex flex-column gap-2"
+            >
+              <h2 class="base_color">Our Services</h2>
+              <a href="#" class="fs-5 service_link text-secondary">MakeUp</a>
+              <a href="#" class="fs-5 service_link text-secondary"
+                >Hairdressing</a
+              >
+              <a href="#" class="fs-5 service_link text-secondary">Barber</a>
+              <a href="#" class="fs-5 service_link text-secondary">Massage</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+
+      <section id="footer">
+        <div id="betty-footer2">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <div class="betty-logo">
+                  <a href="index.html"
+                    ><img src="./Images/Logo3.PNG" alt=""
+                  /></a>
+                  <h2 class="text-center">
+                    Palka Arora
+                    <span>Makeup Artist</span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-left">
+                <div class="betty-footer">
+                  <p>@ Copyrights,2024 Palka Arora. All Rights Reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+    </section>
+
+    <script
+      src="https://kit.fontawesome.com/e9845070d7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </body>
+</html>
