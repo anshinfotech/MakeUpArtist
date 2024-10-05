@@ -177,7 +177,7 @@
       // Fetch all blogs
       async function fetchAllBlogs() {
         try {
-          const response = await fetch("https://palkaaroramakeupartist.com/all-blogs");
+          const response = await fetch("/all-blogs");
           const data = await response.json();
           if (data.success) {
             // Populate the table with fetched blogs
@@ -214,7 +214,7 @@
       // Update a blog
       async function updateBlog(blogId, updateData) {
         try {
-          const response = await fetch(`https://palkaaroramakeupartist.com/update-Blog/${blogId}`, {
+          const response = await fetch(`/update-Blog/${blogId}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
@@ -237,7 +237,7 @@
       // Delete a blog
       async function deleteBlog(blogId) {
         try {
-          const response = await fetch(`https://palkaaroramakeupartist.com/delete-Blog/${blogId}`, {
+          const response = await fetch(`/delete-Blog/${blogId}`, {
             method: "DELETE",
           });
           const data = await response.json();

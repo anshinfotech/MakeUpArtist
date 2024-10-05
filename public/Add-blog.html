@@ -272,7 +272,7 @@ body {
         const image = result.info.secure_url;
 
         try {
-          const response = await fetch("https://palkaaroramakeupartist.com/create-blog", {
+          const response = await fetch("/create-blog", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

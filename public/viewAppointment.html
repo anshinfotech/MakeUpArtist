@@ -171,7 +171,7 @@
     
       async function fetchAppointments() {
         try {
-          const response = await fetch("https://palkaaroramakeupartist.com/getallappointments"); // Endpoint to fetch appointments data
+          const response = await fetch("/getallappointments"); // Endpoint to fetch appointments data
           const data = await response.json();
           console.log(data);
           if (data.success) {

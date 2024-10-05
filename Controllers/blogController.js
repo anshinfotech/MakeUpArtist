@@ -179,7 +179,7 @@ const readblog = async (req, res) => {
             Share this blog on Instagram, Facebook, and WhatsApp
           </p>
         </div>
-        <a href="https://palkaaroramakeupartist.com/" class="back-link">&larr; Back to All Blogs</a>
+        <a href="/" class="back-link">&larr; Back to All Blogs</a>
       </div>
     </body>
     </html>

@@ -16,7 +16,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "https://palkaaroramakeupartist.com",
+    origin: "*",
     credentials: true,
   })
 );
