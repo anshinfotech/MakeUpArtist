@@ -169,6 +169,7 @@ const loginAdmin = async (req, res) => {
   }
 };
 const getAdminDashboard = (req, res) => {
+  alert(`${path.join(__dirname, "../public", "admin.html")}`)
   res.sendFile(path.join(__dirname, "../public", "admin.html"));
 };
 
