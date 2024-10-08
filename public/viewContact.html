@@ -1,202 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="admin.css" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: sans-serif;
-      }
 
-      body {
-        background-color: #f8f9fa;
-      }
-      .sidebar {
-        background: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
-        color: #fff;
-        padding: 20px;
-      }
-      .sidebar h1 {
-        margin-bottom: 30px;
-      }
-      .sidebar a {
-        color: #fff;
-        font-size: 24px; /* Increase text size */
-        display: flex;
-        align-items: center;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Add box shadow */
-        transition: box-shadow 0.3s ease; /* Add transition effect */
-        margin-bottom: 10px; /* Increase gap between links */
-      }
-      .sidebar a:hover {
-        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Adjust box shadow on hover */
-      }
-      .sidebar a i {
-        font-size: 28px; /* Increase icon size */
-        margin-right: 10px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="admin.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
 
-      .main-content {
-        padding: 20px;
-        height: 100vh; /* Set main content height to cover entire screen */
-      }
-      .card {
-        background-color: #7c1cf3; /* Violet background color */
-        border: none;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Increase shadow */
-        margin-bottom: 20px; /* Adjust margin between cards */
-        transition: transform 0.3s ease; /* Add transition for hover effect */
-      }
-      .card:hover {
-        transform: translateY(-5px); /* Adjust translateY on hover */
-        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Adjust box shadow on hover */
-      }
-      .card-title {
-        color: #fff; /* White text color */
-        position: relative; /* Position relative for superscript */
-      }
-      .card-title sup {
-        font-size: 18px; /* Adjust size of superscript */
-        position: absolute; /* Position absolute for superscript */
-        top: -10px; /* Adjust vertical position of superscript */
-        right: 5px; /* Adjust horizontal position of superscript */
-      }
-      .card-text {
-        color: #fff; /* White text color */
-      }
-      .btn-outline-light {
-        color: #fff; /* White text color */
-        border-color: #fff; /* White border color */
-      }
-      .btn-outline-light:hover {
-        background-color: #fff; /* White background color on hover */
-        color: #7c1cf3; /* Violet text color on hover */
-      }
-      .card-title sup {
-        font-size: 36px; /* Increase size of superscript */
-        position: absolute; /* Position absolute for superscript */
-        top: 8px; /* Adjust vertical position of superscript */
-        right: 8px; /* Adjust horizontal position of superscript */
-        background-color: #7c1cf3; /* Violet background color */
-        color: #fff; /* White text color */
-        padding: 4px 8px; /* Add padding */
-        border-radius: 50%; /* Make it circular */
-      }
+    body {
+      background-color: #f8f9fa;
+    }
 
-      #createBlogBtn:hover {
-        background-color: rgb(205, 122, 135) !important;
-      }
-      #createBlogBtn:focus {
-        background-color: rgb(156, 78, 91) !important;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <!-- Sidebar -->
-        <div class="col-lg-3 sidebar">
-          <h1>Makeup Studio</h1>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard"
-                ><i class="fas fa-home"></i> Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="viewAppointment"
-                ><i class="fas fa-calendar-alt"></i> Appointments</a
-              >
-            </li>
+    .sidebar {
+      background: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+      color: #fff;
+      padding: 20px;
+    }
 
-            <li class="nav-item">
-              <a class="nav-link" href="add-blog"
-                ><i class="fas fa-plus"></i> Add Blogs</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="viewBlog"
-                ><i class="fas fa-eye"></i> View Blogs</a
-              >
-            </li>
+    .sidebar h1 {
+      margin-bottom: 30px;
+    }
 
-            <li class="nav-item">
-              <a class="nav-link" href="viewContact"
-                ><i class="fas fa-eye"></i> View Contacts</a
-              >
-            </li>
-          </ul>
-        </div>
+    .sidebar a {
+      color: #fff;
+      font-size: 24px;
+      /* Increase text size */
+      display: flex;
+      align-items: center;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      /* Add box shadow */
+      transition: box-shadow 0.3s ease;
+      /* Add transition effect */
+      margin-bottom: 10px;
+      /* Increase gap between links */
+    }
 
-        <!-- Main Content -->
-        <div class="col-lg-9 main-content">
-          <h2 class="mt-3">Contacts</h2>
+    .sidebar a:hover {
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+      /* Adjust box shadow on hover */
+    }
 
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead class="table-dark">
-                <tr>
-                  <th scope="col">Id</th>
-                  <th scope="col">First Name</th>
-                  <th scope="col">Last Name</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Subject</th>
-                  <th scope="col">Message</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
+    .sidebar a i {
+      font-size: 28px;
+      /* Increase icon size */
+      margin-right: 10px;
+    }
+
+    .main-content {
+      padding: 20px;
+      height: 100vh;
+      /* Set main content height to cover entire screen */
+    }
+
+    .card {
+      background-color: #7c1cf3;
+      /* Violet background color */
+      border: none;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      /* Increase shadow */
+      margin-bottom: 20px;
+      /* Adjust margin between cards */
+      transition: transform 0.3s ease;
+      /* Add transition for hover effect */
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      /* Adjust translateY on hover */
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+      /* Adjust box shadow on hover */
+    }
+
+    .card-title {
+      color: #fff;
+      /* White text color */
+      position: relative;
+      /* Position relative for superscript */
+    }
+
+    .card-title sup {
+      font-size: 18px;
+      /* Adjust size of superscript */
+      position: absolute;
+      /* Position absolute for superscript */
+      top: -10px;
+      /* Adjust vertical position of superscript */
+      right: 5px;
+      /* Adjust horizontal position of superscript */
+    }
+
+    .card-text {
+      color: #fff;
+      /* White text color */
+    }
+
+    .btn-outline-light {
+      color: #fff;
+      /* White text color */
+      border-color: #fff;
+      /* White border color */
+    }
+
+    .btn-outline-light:hover {
+      background-color: #fff;
+      /* White background color on hover */
+      color: #7c1cf3;
+      /* Violet text color on hover */
+    }
+
+    .card-title sup {
+      font-size: 36px;
+      /* Increase size of superscript */
+      position: absolute;
+      /* Position absolute for superscript */
+      top: 8px;
+      /* Adjust vertical position of superscript */
+      right: 8px;
+      /* Adjust horizontal position of superscript */
+      background-color: #7c1cf3;
+      /* Violet background color */
+      color: #fff;
+      /* White text color */
+      padding: 4px 8px;
+      /* Add padding */
+      border-radius: 50%;
+      /* Make it circular */
+    }
+
+    #createBlogBtn:hover {
+      background-color: rgb(205, 122, 135) !important;
+    }
+
+    #createBlogBtn:focus {
+      background-color: rgb(156, 78, 91) !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-lg-3 sidebar">
+        <h1>Makeup Studio</h1>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/dashboard"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/viewAppointment"><i class="fas fa-calendar-alt"></i> Appointments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/add-blog"><i class="fas fa-plus"></i> Add Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/viewBlog.html"><i class="fas fa-eye"></i> View Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/viewContact"><i class="fas fa-eye"></i> View Contacts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-lg-9 main-content">
+        <h2 class="mt-3">Contacts</h2>
+
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Message</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
         </div>
       </div>
     </div>
-  </body>
-  <script
-    src="https://kit.fontawesome.com/57fc0d57b8.js"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Yv..."
-  ></script>
-  <script>
-    // Fetch appointments data
-    fetchContacts();
-  
-    async function fetchContacts() {
-      try {
-        const response = await fetch("/contacts"); // Endpoint to fetch appointments data
-        const data = await response.json();
-        console.log(data);
-        if (data.success) {
-          populateContactTable(data.contacts);
-        } else {
-          console.error("Failed to fetch appointments:", data.message);
-        }
-      } catch (error) {
-        console.error("Error fetching appointments:", error);
+  </div>
+</body>
+<script src="https://kit.fontawesome.com/57fc0d57b8.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Yv..."></script>
+<script>
+  // Fetch appointments data
+  fetchContacts();
+
+  async function fetchContacts() {
+    try {
+      const response = await fetch("/contacts"); // Endpoint to fetch appointments data
+      const data = await response.json();
+      console.log(data);
+      if (data.success) {
+        populateContactTable(data.contacts);
+      } else {
+        console.error("Failed to fetch appointments:", data.message);
       }
+    } catch (error) {
+      console.error("Error fetching appointments:", error);
     }
-  
-    function populateContactTable(contacts) {
-      const tableBody = document.querySelector("tbody");
-      tableBody.innerHTML = ""; // Clear existing table rows
-  
-      contacts.forEach(contact => {
-        const options = { timeZone: 'Asia/Kolkata' }; // Set the time zone to IST
-        const dateIST = new Date(contact.date).toLocaleDateString('en-IN', options); // Convert date to IST
-        const row = `
+  }
+
+  function populateContactTable(contacts) {
+    const tableBody = document.querySelector("tbody");
+    tableBody.innerHTML = ""; // Clear existing table rows
+
+    contacts.forEach(contact => {
+      const options = { timeZone: 'Asia/Kolkata' }; // Set the time zone to IST
+      const dateIST = new Date(contact.date).toLocaleDateString('en-IN', options); // Convert date to IST
+      const row = `
           <tr>
             <td>${contact._id}</td>
             <td>${contact.fname}</td>
@@ -206,8 +236,9 @@
             <td style="white-space:pre-wrap;">${contact.message}</td>
           </tr>
         `;
-        tableBody.innerHTML += row;
-      });
-    }
-  </script>
+      tableBody.innerHTML += row;
+    });
+  }
+</script>
+
 </html>

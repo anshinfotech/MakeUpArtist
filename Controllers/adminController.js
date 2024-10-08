@@ -180,7 +180,7 @@ const getViewCourse = (req, res) => {
 };
 
 const getAddBlog = (req, res) => {
-  res.sendFile(path.join(__dirname, "../public", "Add-Blog.html"));
+  res.sendFile(path.join(__dirname, "../public", "Add-blog.html"));
 };
 const getViewBlog = (req, res) => {
   res.sendFile(path.join(__dirname, "../public", "viewBlog.html"));
