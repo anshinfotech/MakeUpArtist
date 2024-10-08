@@ -17,6 +17,7 @@ const cors = require("cors");
 app.use(
   cors({
     origin: "https://palkaaroramakeupartist.com",
+    // origin: "*",
     credentials: true,
   })
 );
@@ -26,12 +27,18 @@ app.use(cookieparser());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
+//custom route for static files
+app.get("/see_all_blogs", (req, res) => {
+  res.sendFile(path.join(__dirname , './public' , "ShowAllBlogs.html"));
+});
+
+//Other Routes
 app.use("/", blogRoute);
 app.use("/", adminRoute);
 app.use("/", appointmentRoute);
 app.use("/", courseRoute);
 app.use("/", reviewRoute);
-app.use("/",contactRoute)
+app.use("/", contactRoute);
 // app.use("/", teamRoute);
 // app.use("/", packageRoute);
 

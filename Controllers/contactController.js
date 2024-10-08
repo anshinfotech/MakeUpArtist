@@ -52,8 +52,7 @@ const createContact = async (req, res) => {
 
     await transporter.sendMail({
       from: process.env.AUTH_EMAIL,
-      // to: process.env.NOTIFICATION_EMAIL,
-      to: 'singhjaspreet2425@gmail.com',
+      to: 'palkaaroramakeover@gmail.com',
       subject: 'New Contact Form Submission - Palka Arora Makeup Artistry',
       html: `
         <div style="padding: 20px; font-family: Arial, sans-serif;">
