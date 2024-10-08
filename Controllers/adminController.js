@@ -169,7 +169,7 @@ const loginAdmin = async (req, res) => {
   }
 };
 const getAdminDashboard = (req, res) => {
-  res.sendFile(path.join(__dirname, "../public", "admin.html"));
+  res.sendFile(path.join(__dirname, "../public", "Admin.html"));
 };
 
 const getAddCourse = (req, res) => {
